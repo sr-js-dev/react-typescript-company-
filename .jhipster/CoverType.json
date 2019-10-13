@@ -1,0 +1,42 @@
+{
+    "name": "CoverType",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "brokerCommission",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "riskClass",
+            "otherEntityRelationshipName": "coverType",
+            "relationshipValidateRules": "required",
+            "relationshipName": "riskClass",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190725110433",
+    "entityTableName": "cover_type",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

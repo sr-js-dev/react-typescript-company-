@@ -1,0 +1,112 @@
+{
+    "name": "Client",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "middleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "clientName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ledgerName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "clientPrintName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contactPersion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "streetAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "county",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pinNumber",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Status",
+            "fieldValues": "ACTIVE,INACTIVE"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "clientCategory",
+            "otherEntityRelationshipName": "client",
+            "relationshipValidateRules": "required",
+            "relationshipName": "category",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "nameTitle",
+            "otherEntityRelationshipName": "client",
+            "relationshipName": "title",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "idType",
+            "otherEntityRelationshipName": "client",
+            "relationshipValidateRules": "required",
+            "relationshipName": "idType",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190725110429",
+    "entityTableName": "client",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

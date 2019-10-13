@@ -1,0 +1,41 @@
+{
+    "name": "ClientPolicyPayment",
+    "fields": [
+        {
+            "fieldName": "payDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "paymentMethod",
+            "fieldType": "PaymentMethod",
+            "fieldValues": "CARD,MPESA,CASH,CHEQUE,BANK_TRANSFER"
+        },
+        {
+            "fieldName": "isIPF",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "clientPolicy",
+            "otherEntityRelationshipName": "clientPolicyPayment",
+            "relationshipValidateRules": "required",
+            "relationshipName": "clientPolicy",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190725110437",
+    "entityTableName": "client_policy_payment",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

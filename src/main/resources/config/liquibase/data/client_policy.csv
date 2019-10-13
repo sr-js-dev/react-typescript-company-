@@ -1,0 +1,11 @@
+id;policy_date;invoice_no;start_date;end_date;primium_payable;open_payable;payment_status;client_id;policy_id
+1;2019-07-25;Savings Account access;2019-07-24;2019-07-25;62929;97587;UNPAID;10;1
+2;2019-07-24;Gorgeous Niger;2019-07-25;2019-07-24;84435;26601;PARTIAL;2;2
+3;2019-07-24;Re-engineered;2019-07-24;2019-07-24;81068;37588;PARTIAL;8;10
+4;2019-07-24;Security;2019-07-24;2019-07-24;31540;94283;UNPAID;10;1
+5;2019-07-25;online quantifying Borders;2019-07-25;2019-07-24;45012;63666;PAID;1;5
+6;2019-07-24;Computer matrix Berkshire;2019-07-24;2019-07-25;4167;3802;PAID;7;1
+7;2019-07-24;Small;2019-07-25;2019-07-24;50857;73750;PAID;4;10
+8;2019-07-24;invoice grey Shirt;2019-07-25;2019-07-24;66030;83053;UNPAID;9;3
+9;2019-07-24;Pre-emptive Coordinator Djibouti Franc;2019-07-25;2019-07-25;25541;61501;UNPAID;7;10
+10;2019-07-24;Unbranded Frozen Gloves back-end;2019-07-25;2019-07-24;97997;11395;PARTIAL;6;9

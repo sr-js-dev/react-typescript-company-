@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Benefit.
+    -->
+    <changeSet id="20190725110424-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="benefit_type_id"
+                                 baseTableName="benefit"
+                                 constraintName="fk_benefit_benefit_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="benefit_type"/>
+
+    </changeSet>
+</databaseChangeLog>

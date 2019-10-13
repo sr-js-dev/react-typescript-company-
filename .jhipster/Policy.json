@@ -1,0 +1,51 @@
+{
+    "name": "Policy",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "primiumPayable",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Status",
+            "fieldValues": "ACTIVE,INACTIVE"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "coverType",
+            "otherEntityRelationshipName": "policy",
+            "relationshipValidateRules": "required",
+            "relationshipName": "coverType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "underwriter",
+            "otherEntityRelationshipName": "policy",
+            "relationshipValidateRules": "required",
+            "relationshipName": "underwriter",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190725110434",
+    "entityTableName": "policy",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

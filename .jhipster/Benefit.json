@@ -1,0 +1,39 @@
+{
+    "name": "Benefit",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "benefitRate",
+            "fieldType": "BenefitRate",
+            "fieldValues": "FIXED,PERCENTAGE"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "benefitType",
+            "otherEntityRelationshipName": "benefit",
+            "relationshipName": "benefitType",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190725110424",
+    "entityTableName": "benefit",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

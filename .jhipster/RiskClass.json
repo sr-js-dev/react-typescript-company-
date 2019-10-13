@@ -1,0 +1,35 @@
+{
+    "name": "RiskClass",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "riskCategory",
+            "otherEntityRelationshipName": "riskClass",
+            "relationshipValidateRules": "required",
+            "relationshipName": "riskCategory",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190725110432",
+    "entityTableName": "risk_class",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

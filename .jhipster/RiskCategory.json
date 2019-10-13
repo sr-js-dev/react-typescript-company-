@@ -1,0 +1,35 @@
+{
+    "name": "RiskCategory",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "productType",
+            "otherEntityRelationshipName": "riskCategory",
+            "relationshipValidateRules": "required",
+            "relationshipName": "productType",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190725110431",
+    "entityTableName": "risk_category",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

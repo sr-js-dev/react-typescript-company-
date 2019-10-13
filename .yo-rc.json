@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.flag42.ibs"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "monolith",
+    "baseName": "ibs",
+    "packageName": "com.flag42.ibs",
+    "packageFolder": "com/flag42/ibs",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YWVmM2VmOTNlZmI4ZTNhZDY1MWVmZTQ5ZWQyYWJjODZjMjVlNmM4Yzc4MWFmYmNmNDRmZGQ3NDU1NGQ3NGEwYjI5ZWRjZmMzZWNlZmY2NGM3YzQ3YzBjYmQ2NjJkNDc4Y2I5YWQ3ZjExOTA3YmVhNmMwMTlhOTNiYWJkNDhlNjA=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false
+  }
+}

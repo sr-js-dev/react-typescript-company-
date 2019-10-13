@@ -1,0 +1,70 @@
+{
+    "name": "ClientPolicy",
+    "fields": [
+        {
+            "fieldName": "policyDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "invoiceNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "primiumPayable",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "openPayable",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "paymentStatus",
+            "fieldType": "PaymentStatus",
+            "fieldValues": "UNPAID,PARTIAL,PAID"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "client",
+            "otherEntityRelationshipName": "clientPolicy",
+            "relationshipValidateRules": "required",
+            "relationshipName": "client",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "policy",
+            "otherEntityRelationshipName": "clientPolicy",
+            "relationshipValidateRules": "required",
+            "relationshipName": "policy",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190725110436",
+    "entityTableName": "client_policy",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

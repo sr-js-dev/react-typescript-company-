@@ -1,0 +1,45 @@
+{
+    "name": "PolicyBenefit",
+    "fields": [
+        {
+            "fieldName": "benefitRate",
+            "fieldType": "BenefitRate",
+            "fieldValues": "FIXED,PERCENTAGE"
+        },
+        {
+            "fieldName": "benefitValue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "benefitMinValue",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "benefit",
+            "otherEntityRelationshipName": "policyBenefit",
+            "relationshipValidateRules": "required",
+            "relationshipName": "benefit",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "policy",
+            "otherEntityRelationshipName": "policyBenefit",
+            "relationshipValidateRules": "required",
+            "relationshipName": "policy",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190725110435",
+    "entityTableName": "policy_benefit",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
